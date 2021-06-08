@@ -7,15 +7,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-
-/**
- * Game card
- *
- * Can be one of the 4 suits with value
- * ranging from 'Ace' to '2'
- *
- * @author Almas
- */
 public class Card extends Parent {
 
     private static final int CARD_WIDTH = 50;
