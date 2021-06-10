@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <HBox prefHeight="150.0" prefWidth="600.0" />
-      <HBox layoutY="150.0" prefHeight="100.0" prefWidth="600.0" />
-      <HBox layoutY="249.0" prefHeight="150.0" prefWidth="600.0" />
+      <HBox fx:id="dealerCards" prefHeight="150.0" prefWidth="600.0" />
+      <HBox layoutY="150.0" prefHeight="100.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="128.0">
+               <children>
+                  <Label fx:id="dealerScore" text="Player hand value:" />
+                  <Label prefHeight="18.0" prefWidth="74.0" />
+                  <Label fx:id="playerScore" text="Dealers hand value::" />
+                  <Label prefHeight="18.0" prefWidth="74.0" />
+               </children>
+            </VBox>
+            <Button id="playButton" fx:id="playButton" mnemonicParsing="false" prefHeight="104.0" prefWidth="250.0" text="Play" />
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button id="hitButton" fx:id="hitButton" mnemonicParsing="false" prefHeight="54.0" prefWidth="250.0" text="Hit" />
+                  <Button id="standButton" fx:id="standButton" mnemonicParsing="false" prefHeight="54.0" prefWidth="249.0" text="Stand" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="message" />
+                  <Label fx:id="playerWinCount" text="Player Score" />
+                  <Label fx:id="dealerWinCount" text="Dealer Score" />
+               </children>
+            </VBox>
+         </children></HBox>
+      <HBox fx:id="playerCards" layoutY="249.0" prefHeight="150.0" prefWidth="600.0" />
    </children>
 </AnchorPane>

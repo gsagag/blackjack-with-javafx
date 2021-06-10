@@ -22,7 +22,7 @@ public class Hand {
         }
 
         if (value.get() + card.value > 21 && aces > 0) {
-            value.set(value.get() + card.value - 10);    //then count ace as '1' not '11'
+            value.set(value.get() + card.value - 10);
             aces--;
         }
         else {
